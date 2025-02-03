@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Introduction - Everest Technology</title>
+  <style>
+    /* Overall styling to match the main page */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+      color: white;
+    }
+    
+    /* Header: aligned with main page logo (10% from left) */
+    .prod-header {
+      padding: 20px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-align: left;
+      margin: 30px 0 0 10%;
+    }
+    
+    /* Main Section: Two products side by side, centered vertically */
+    .prod-main {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 150px; /* Increased gap between images */
+      padding: 40px 20px;
+      flex-wrap: wrap;
+      margin-top: 50px; /* adjust this value as needed */
+      flex: 1;
+    }
+    
+    .product {
+      text-align: center;
+    }
+    
+    .product img {
+      width: 300px; /* smaller image size */
+      height: auto;
+    }
+    
+    /* Constrain description width so it wraps as paragraphs */
+    .product-description {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Navigation at the bottom */
+    .navigation {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
+    
+    .navigation a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: white;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .navigation a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    /* Footer styling */
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      font-size: 0.9rem;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .prod-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+      
+      .product img {
+        width: 200px;
+      }
+      
+      .prod-header {
+        margin: 30px auto 0 auto;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header (aligned with main page logo) -->
+  <div class="prod-header">
+    Product Introduction
+  </div>
+  
+  <!-- Main Section with two products -->
+  <div class="prod-main">
+    <div class="product">
+      <img src="product_1.jpg" alt="Product 1">
+      <p class="product-description">GAN FET Design and Produce</p>
+    </div>
+    <div class="product">
+      <img src="product_2.jpg" alt="Product 2">
+      <p class="product-description">
+        SI Photodiode design and Produce
+      </p>
+    </div>
+  </div>
+  
+  <!-- Navigation at the bottom with a Home link -->
+  <div class="navigation">
+    <a href="index.html">Home</a>
+    <a href="res.html">Research and Development</a>
+    <a href="company.html">Company Introduction</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+  
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 Everest Technology. All rights reserved.
+  </div>
+</body>
+</html>

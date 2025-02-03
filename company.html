@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Introduction - Everest Technology</title>
+  <style>
+    /* Overall styling matching the production page */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+      color: white;
+    }
+    
+    /* Header: same styling and positioning as the production page */
+    .prod-header {
+      padding: 20px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-align: left;
+      margin: 30px 0 0 10%;
+    }
+    
+    /* Main Section: Container for three columns */
+    .company-main {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px; /* Reduced gap for a tighter layout */
+      padding: 40px 20px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      flex: 1;
+    }
+    
+    /* Column styling with a maximum width to prevent overexpansion */
+    .column {
+      background: rgba(255, 255, 255, 0.8);
+      color: #333;
+      padding: 20px;
+      border-radius: 8px;
+      min-width: 250px;
+      max-width: 300px;  /* Limit the maximum width of each column */
+      flex: 1 1 auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+    
+    .column h3 {
+      margin-top: 0;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    
+    .column p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+    
+    /* Navigation: same styling and positioning as the production page */
+    .navigation {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
+    
+    .navigation a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: white;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .navigation a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Footer: same as production page */
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      font-size: 0.9rem;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .company-main {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .prod-header {
+        margin: 30px auto 0 auto;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="prod-header">
+    About Everest
+  </div>
+  
+  <!-- Main Section: Three columns -->
+  <div class="company-main">
+    <!-- First Column: Overall Description (content only, no heading) -->
+    <div class="column">
+      <p>
+        <strong>EVEREST TECH</strong> is a company registered in Singapore, specializing in semiconductor process technology development.
+We offer semiconductor equipment performance testing services.Our team has extensive experience in the R&D of advanced semiconductor process technologies, including gallium nitride and silicon photonics
+We are well-versed in the selection, testing, installation, operation, and maintenance of key semiconductor equipment (e.g. ASML lithography
+machines, Nikon lithography machines, AMAT, TEL, KLA, ASM, etc.) </p>
+    </div>
+    <!-- Second Column: Our Team -->
+    <div class="column">
+      <h3>Our Team</h3>
+      <p>
+        Our core team comprises more than 30 professional technical experts, who have been dedicated to their respective fields for over twenty years.
+Team members have extensive working experience in renowned domestic and foreign enterprises and research institutions, such as ASML, the
+Institute of Microelectronics (IME) of Singapore, SSMC, and Hua Hong Grace Semiconductor Manufacturing Co., Ltd.
+We have abundant technical reserves and rich practical experience.      </p>
+    </div>
+    <!-- Third Column: More About Us -->
+    <div class="column">
+      <h3>More About Us</h3>
+      <p>
+        EVEREST TECH has always been committed to providing enterprises and research institutes with semiconductor-related technical services of
+international and advanced standards.
+We aim to expand into more international markets, as well as to offer an even broader range of professional services.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <div class="navigation">
+    <a href="index.html">Home</a>
+    <a href="production.html">Product Introduction</a>
+    <a href="res.html">Research and Development</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+  
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 Everest Technology. All rights reserved.
+  </div>
+</body>
+</html>
