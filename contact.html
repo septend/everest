@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Everest Technology</title>
   <style>
-    /* Overall styling matching the production page */
+    /* 整体样式，与 Production 页面一致 */
     body {
       margin: 0;
       padding: 0;
@@ -20,30 +20,30 @@
       color: white;
     }
     
-    /* Header: same style and positioning as production page */
+    /* 页头：与 Production 页面风格一致 */
     .prod-header {
       padding: 20px;
       font-size: 2.2rem;
       font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       text-align: left;
       margin: 30px 0 0 10%;
     }
     
-    /* Main Section: Arranged vertically and aligned to the left */
+    /* 主要内容区域：联系人信息垂直排列，左对齐 */
     .contact-main {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* align content to left */
-      gap: 20px; /* vertical gap between sections */
+      align-items: flex-start; /* 左对齐 */
+      gap: 20px; /* 各部分之间的垂直间距 */
       padding: 40px 20px;
       margin-top: 50px;
       flex: 1;
       width: 90%;
-      margin-left: 10%; /* to align with header */
+      margin-left: 10%; /* 与页头左侧对齐 */
     }
     
-    /* Contact section styling (plain text, no box) */
+    /* 联系方式各部分的样式（纯文本，无背景框） */
     .contact-section {
       background: transparent;
       padding: 0;
@@ -66,7 +66,7 @@
       margin: 0 0 10px 0;
     }
     
-    /* Social Media icons styling */
+    /* 社交媒体图标 */
     .social-icons {
       display: flex;
       gap: 10px;
@@ -82,7 +82,7 @@
       height: 40px;
     }
     
-    /* Navigation: same as production page, but with no "Contact Us" link */
+    /* 导航栏：保持与 Production 页面一致 */
     .navigation {
       display: flex;
       justify-content: center;
@@ -98,23 +98,26 @@
       padding: 8px 15px;
       border-radius: 5px;
       transition: 0.3s;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     
     .navigation a:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255,255,255,0.2);
     }
     
-    /* Footer: same as production page */
+    /* 页脚 */
     .footer {
       text-align: center;
       padding: 10px;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0,0,0,0.5);
       font-size: 0.9rem;
     }
     
-    /* Responsive adjustments */
+    /* 响应式调整：屏幕宽度小于768px时 */
     @media (max-width: 768px) {
+      body {
+                background-image: url('background—small.png');
+            }
       .prod-header {
         margin: 30px auto 0 auto;
         text-align: center;
@@ -130,49 +133,73 @@
       .social-icons {
         justify-content: center;
       }
+      .navigation {
+        justify-content: center;
+      }
+    }
+    
+    /* 针对屏幕宽度小于600px的进一步优化，确保左侧 Home 链接可见 */
+    @media (max-width: 600px) {
+      .prod-header {
+        font-size: 1.8rem;
+        padding: 15px;
+      }
+      .contact-section p {
+        font-size: 1rem;
+      }
+      .navigation {
+        /* 左对齐，并启用水平滚动 */
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 5px;
+      }
+      .navigation a {
+        font-size: 1.1rem;
+        padding: 6px 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- 页头 -->
   <div class="prod-header">
     Contact US
   </div>
   
-  <!-- Main Section: Contact details arranged vertically and aligned to the left -->
+  <!-- 主要内容区域：联系人信息垂直排列 -->
   <div class="contact-main">
-    <!-- Phone Section -->
+    <!-- 电话部分 -->
     <div class="contact-section">
       <h3>Phone</h3>
       <p>(65) 80975771</p>
-  
     </div>
     
-    <!-- Email Section -->
+    <!-- 邮件部分 -->
     <div class="contact-section">
       <h3>Email</h3>
       <p>info@EVEREST.sg</p>
-   
     </div>
     
-    <!-- Social Media Section -->
+    <!-- 社交媒体部分 -->
     <div class="contact-section">
       <h3>Social Media</h3>
       <div class="social-icons">
         <a href="https://www.instagram.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram">
+          <img src="ins.jpeg" alt="Instagram">
+          
         </a>
         <a href="https://telegram.org/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+          <img src="tele.png" alt="Telegram">
         </a>
         <a href="https://www.facebook.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+          <img src="fb.jpeg" alt="Facebook">
         </a>
       </div>
     </div>
   </div>
   
-  <!-- Navigation -->
+  <!-- 导航栏 -->
   <div class="navigation">
     <a href="index.html">Home</a>
     <a href="production.html">Product Introduction</a>
@@ -180,7 +207,7 @@
     <a href="company.html">Company Introduction</a>
   </div>
   
-  <!-- Footer -->
+  <!-- 页脚 -->
   <div class="footer">
     © 2025 Everest Technology. All rights reserved.
   </div>

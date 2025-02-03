@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Introduction - Everest Technology</title>
   <style>
-    /* Overall styling to match the main page */
+    /* 整体样式，与主页保持一致 */
     body {
       margin: 0;
       padding: 0;
@@ -21,7 +21,7 @@
       color: white;
     }
     
-    /* Header: aligned with main page logo (10% from left) */
+    /* 页头：与主页 logo 对齐，左侧留 10% 边距 */
     .prod-header {
       padding: 20px;
       font-size: 2.2rem;
@@ -31,16 +31,16 @@
       margin: 30px 0 0 10%;
     }
     
-    /* Main Section: Two products side by side, centered vertically */
+    /* 主要内容区域：产品区域，两张图片并排显示 */
     .prod-main {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 150px; /* Increased gap between images */
+      gap: 150px; /* 图片间隔 */
       padding: 40px 20px;
       flex-wrap: wrap;
-      margin-top: 50px; /* adjust this value as needed */
+      margin-top: 50px; /* 根据需要调整 */
       flex: 1;
     }
     
@@ -49,11 +49,11 @@
     }
     
     .product img {
-      width: 300px; /* smaller image size */
+      width: 300px; /* 图片尺寸 */
       height: auto;
     }
     
-    /* Constrain description width so it wraps as paragraphs */
+    /* 产品描述：限制宽度，使文本自动换行 */
     .product-description {
       margin-top: 10px;
       font-size: 1.1rem;
@@ -65,12 +65,13 @@
       margin-right: auto;
     }
     
-    /* Navigation at the bottom */
+    /* 导航栏：位于底部 */
     .navigation {
       display: flex;
       justify-content: center;
       gap: 20px;
       padding: 15px 0;
+      flex-wrap: wrap; /* 增加换行支持，确保所有链接能显示 */
     }
     
     .navigation a {
@@ -88,7 +89,7 @@
       background: rgba(255,255,255,0.2);
     }
     
-    /* Footer styling */
+    /* 页脚 */
     .footer {
       text-align: center;
       padding: 10px;
@@ -96,8 +97,11 @@
       font-size: 0.9rem;
     }
     
-    /* Responsive adjustments */
+    /* 响应式调整 */
     @media (max-width: 768px) {
+        body {
+                background-image: url('background—small.png');
+            }
       .prod-main {
         flex-direction: column;
         align-items: center;
@@ -112,30 +116,37 @@
         margin: 30px auto 0 auto;
         text-align: center;
       }
+      
+      /* 移动设备下调整导航链接 */
+      .navigation a {
+        padding: 8px 10px;
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Header (aligned with main page logo) -->
+  <!-- 页头 -->
   <div class="prod-header">
     Product Introduction
   </div>
   
-  <!-- Main Section with two products -->
+  <!-- 主要内容区域 -->
   <div class="prod-main">
     <div class="product">
-      <img src="product_1.jpg" alt="Product 1">
+      <img src="product_1.jpg"  srcset="product_1.jpg 600w, product_1.jpg 1000w, product_1.jpg 1500w"
+      sizes="(max-width: 600px) 90vw, 30vw" alt="Product 1" loading="lazy">
+      
       <p class="product-description">GAN FET Design and Produce</p>
     </div>
     <div class="product">
-      <img src="product_2.jpg" alt="Product 2">
-      <p class="product-description">
-        SI Photodiode design and Produce
-      </p>
+        <img src="product_2.jpg"  srcset="product_2.jpg 600w, product_2.jpg 1000w, product_2.jpg 1500w"
+        sizes="(max-width: 600px) 90vw, 30vw" alt="Product 2" loading="lazy">
+      <p class="product-description">SI Photodiode design and Produce</p>
     </div>
   </div>
   
-  <!-- Navigation at the bottom with a Home link -->
+  <!-- 导航栏 -->
   <div class="navigation">
     <a href="index.html">Home</a>
     <a href="res.html">Research and Development</a>
@@ -143,7 +154,7 @@
     <a href="contact.html">Contact Us</a>
   </div>
   
-  <!-- Footer -->
+  <!-- 页脚 -->
   <div class="footer">
     © 2025 Everest Technology. All rights reserved.
   </div>
